@@ -1,0 +1,17 @@
+import matplotlib.pyplot as plt
+import numpy as np
+x = np.linspace(0, 10, 100)
+y1 = np.sin(x)
+y2 = np.cos(x)
+y3 = np.tan(x)
+fig, ax = plt.subplots(figsize=(10, 6))
+ax.plot(x, y1, color='blue', linewidth=2, label='sin(x)')
+ax.plot(x, y2, color='red', linewidth=1.5, label='cos(x)')
+ax.plot(x, y3, color='green', linewidth=1, label='tan(x)')
+ax.set_title('Multiple Lines Plot')
+ax.set_xlabel('x')
+ax.set_ylabel('y')
+ax.legend()
+ax.set_xlim(0, 10)
+ax.grid(True)
+plt.show()
